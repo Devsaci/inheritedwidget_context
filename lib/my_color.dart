@@ -11,6 +11,5 @@ class MyColor extends InheritedWidget{
     return color != oldWidget.color;
   }
 
-  static MyColor of(context) => context.inheritedFromWodgetOfExactType(MyColor);
-
+  static MyColor of(context) => context.inheritFromWodgetOfExactType(MyColor);
 }
