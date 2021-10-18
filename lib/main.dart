@@ -34,14 +34,14 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: MyColor(
           color: Colors.amber,
-          child: Text(
-            "My Text",
-            style: TextStyle(
-                fontSize: 35, backgroundColor: MyColor.of(context).color),
-            /*  The following assertion was thrown building MyHomePage(dirty, state: _MyHomePageState#2b531):
-            No MyColor found in context
-            'package:inheritedwidget_context/my_color.dart':
-            Failed assertion: line 14 pos 12: 'result != null'*/
+          child: Builder(
+            builder: (BuildContext innerContext) {
+              return Text(
+                "My Text",
+                style: TextStyle(
+                    fontSize: 35, backgroundColor: MyColor.of(innerContext).color),
+              );
+            }
           ),
         ),
       ),
