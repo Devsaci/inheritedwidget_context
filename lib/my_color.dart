@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyColor extends InheritedWidget{
+  MyColor({Key? key}) : super(key: key, child: Center());
+
 
 
   @override
