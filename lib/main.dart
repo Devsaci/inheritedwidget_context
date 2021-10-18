@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inheritedwidget_context/my_color.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,15 +29,16 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("107. InheritedWidget and Context"),
+        title: const Text("107. InheritedWidget and Context"),
       ),
       body: Center(
         child: Text(
           "My Text",
           style: TextStyle(
-              fontSize: 45, backgroundColor: Theme.of(context).primaryColor),
+              fontSize: 45, backgroundColor: MyColor.of(context).color,
         ),
       ),
+    ),
     );
   }
 }
