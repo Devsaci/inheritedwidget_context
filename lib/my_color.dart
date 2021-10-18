@@ -4,7 +4,7 @@ class MyColor extends InheritedWidget{
   final Color color;
   final Widget child;
 
-  MyColor(this.color, this.child, {Key? key}) : super(key: key, child: Center());
+  MyColor(this.color, this.child, {Key? key,}) : super(key: key, child: Center());
   @override
   bool updateShouldNotify(covariant MyColor oldWidget) {
     // throw UnimplementedError();
