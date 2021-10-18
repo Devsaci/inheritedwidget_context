@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class MyColor extends InheritedWidget{
-  MyColor({Key? key}) : super(key: key, child: Center());
+  final Color color;
+  final Widget child;
 
-
-
+  MyColor(this.color, this.child, {Key? key}) : super(key: key, child: Center());
   @override
   bool updateShouldNotify(covariant MyColor oldWidget) {
-    // TODO: implement updateShouldNotify
-    throw UnimplementedError();
+    // throw UnimplementedError();
+    return true;
   }
 
 
