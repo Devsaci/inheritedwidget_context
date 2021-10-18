@@ -28,6 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
       ),
       body: const Center(
+        child: Text("My Text", style: TextStyle(fontSize: 45,backgroundColor: Colors.blueGrey),),
       ),
     );
   }
