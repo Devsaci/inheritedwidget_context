@@ -8,7 +8,7 @@ class MyColor extends InheritedWidget{
   @override
   bool updateShouldNotify(covariant MyColor oldWidget) {
     // throw UnimplementedError();
-    return true;
+    return color != oldWidget.color;
   }
 
 
