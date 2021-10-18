@@ -10,6 +10,7 @@ class MyColor extends InheritedWidget{
     // throw UnimplementedError();
     return color != oldWidget.color;
   }
-
+//Class 'StatefulElement' has no instance method 'inheritFromWodgetOfExactType'.
+// Receiver: Instance of 'StatefulElement'
   static MyColor of(context) => context.inheritFromWodgetOfExactType(MyColor);
 }
