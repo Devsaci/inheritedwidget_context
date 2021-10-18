@@ -32,13 +32,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text("107. InheritedWidget and Context"),
       ),
       body: Center(
-        child: MyColor(Colors.amber,
-          Text("My Text", style: TextStyle(fontSize: 35, backgroundColor: MyColor.of(context).color),
-              /*Class 'StatefulElement' has no instance method 'inheritFromWodgetOfExactType'.
-              Receiver: Instance of 'StatefulElement'
-              Tried calling: inheritFromWodgetOfExactType(MyColor)*/
-
-        ),
+        child: MyColor(
+          color: Colors.amber,
+          child: Builder(
+            builder: (BuildContext innerContext) => Text(
+              "My Text",
+              style: TextStyle(
+                  fontSize: 35, backgroundColor: MyColor.of( innerContext).color),
+            ),
+          ),
         ),
       ),
     );

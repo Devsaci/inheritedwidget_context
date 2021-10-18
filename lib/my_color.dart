@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
-class MyColor extends InheritedWidget{
+class MyColor extends InheritedWidget {
+  MyColor({
+    Key? key,
+    required this.color,
+    required Widget child,
+  }) : super(key: key, child: child);
   final Color color;
-  final Widget child;
 
-  MyColor(this.color, this.child, {Key? key,}) : super(key: key, child: Center());
-  @override
-  bool updateShouldNotify(covariant MyColor oldWidget) {
-    // throw UnimplementedError();
-    return color != oldWidget.color;
+  static MyColor of(BuildContext context) {
+    final MyColor? result =
+        context.dependOnInheritedWidgetOfExactType<MyColor>();
+    assert(result != null, 'No MyColor found in context');
+    return result!;
   }
-//Class 'StatefulElement' has no instance method 'inheritFromWodgetOfExactType'.
-// Receiver: Instance of 'StatefulElement'
-  static MyColor of(context) => context.inheritFromWodgetOfExactType(MyColor);
+
+  @override
+  bool updateShouldNotify(covariant MyColor oldWidget)  => color != oldWidget.color;
 }
