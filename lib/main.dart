@@ -35,10 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Text(
           "My Text",
           style: TextStyle(
-              fontSize: 45, backgroundColor: MyColor.of(context).color,
+            fontSize: 45,
+            backgroundColor: MyColor.of(context).color,
+          ),
         ),
       ),
-    ),
     );
   }
 }
