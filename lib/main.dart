@@ -26,6 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          title: Text("107. InheritedWidget and Context"),
       ),
       body: const Center(
         child: Text("My Text", style: TextStyle(fontSize: 45,backgroundColor: Colors.blueGrey),),
