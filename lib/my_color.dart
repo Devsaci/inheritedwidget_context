@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyColor extends InheritedWidget {
-  MyColor({
+  const MyColor({
     Key? key,
     required this.color,
     required Widget child,
